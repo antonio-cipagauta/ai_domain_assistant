@@ -8,7 +8,7 @@ st.set_page_config(page_title="Domain Scout AI", page_icon="🌐")
 
 
 # Initialize RAG Engine
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def load_rag():
     return RAGEngine()
 
