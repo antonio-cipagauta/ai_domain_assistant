@@ -1,0 +1,29 @@
+[project]
+name = "ai-domain-assistant"
+version = "0.1.0"
+description = "An AI-powered domain name availability checker and recommender using Gemini and RAG."
+authors = [
+    { name = "Jose Cipagauta", email = "antonio.cipagauta@gmail.com" }
+]
+dependencies = [
+    "streamlit",
+    "google-genai",
+    "python-whois",
+    "python-dotenv",
+    "numpy",
+]
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["ai_suggestions", "domain_checker", "rag_engine"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.6",
+]
